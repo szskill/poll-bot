@@ -1,7 +1,10 @@
 # Poll Bot
 
-This bot allows you to create polls.  
-_Written in discord.py, using the pytest testing framework_
+This bot allows you to create polls.
+
+_Written in `discord.py`_  
+_Tested using the `pytest` framework_  
+_Licensed under the MIT license_
 
 ## Configuring
 
