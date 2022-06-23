@@ -18,3 +18,8 @@ TOKEN=YOUR.TOKEN.HERE
 
 Install Python, if you haven't already.  
 Start the bot using `py -m bot` in the root directory.
+
+# Contribute
+
+Please format your PRs using `black` and lint using `flake8`.  
+Make sure to test your changes using `pytest`.
