@@ -1,1 +1,0 @@
-WHITE = 0xFFFFFF

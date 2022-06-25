@@ -2,9 +2,7 @@
 
 This bot allows you to create polls.
 
-_Written in `discord.py`_  
-_Tested using the `pytest` framework_  
-_Licensed under the MIT license_
+Written in `hikari`/`lightbulb`.
 
 ## Configuring
 
