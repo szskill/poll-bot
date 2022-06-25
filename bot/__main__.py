@@ -4,15 +4,17 @@ import os
 import lightbulb
 import uvicorn
 import dotenv
-
+import miru
 from .web import web_app
 from .embeds import create_help_embed, create_poll_embed
+from .help_cmd import Help
 
 # Load .env contents into os.environ, so we can grab the token
 dotenv.load_dotenv()
 
-bot = lightbulb.BotApp(os.getenv("TOKEN"), "p!")
-
+bot = lightbulb.BotApp(os.getenv("TOKEN"), "p!", help_class=Help)
+miru.load(bot)
+bot.load_extensions_from('bot/plugins')
 
 @bot.command
 @lightbulb.option("text", "The poll text? Very obvious.", modifier=lightbulb.OptionModifier.CONSUME_REST)
