@@ -1,8 +1,11 @@
+import asyncio
 import os
 
 import lightbulb
+import uvicorn
 import dotenv
 
+from .web import web_app
 from .embeds import create_help_embed, create_poll_embed
 
 # Load .env contents into os.environ, so we can grab the token
@@ -39,4 +42,11 @@ async def on_command_error(event: lightbulb.CommandErrorEvent) -> None:
         raise cause
 
 
-bot.run()
+async def main() -> None:
+    await asyncio.gather(
+        bot.start(),
+        uvicorn.Server(uvicorn.Config(web_app, port=3000)).serve(),
+    )
+
+
+asyncio.run(main())

@@ -1,6 +1,8 @@
 hikari
 hikari-lightbulb
 python-dotenv
+FastAPI
+uvicorn
 
 pytest
 
